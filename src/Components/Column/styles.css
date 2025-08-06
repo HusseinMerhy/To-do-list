@@ -1,0 +1,66 @@
+/* Column.css */
+
+.column {
+  background: #fdfdff;
+  flex: 1 1 320px;
+  min-width: 300px;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  padding-bottom: 80px; /* Space for the add button */
+  border: 1px solid #e8eaf0;
+}
+
+/* Hide scrollbar but keep functionality */
+.column::-webkit-scrollbar {
+  width: 8px;
+}
+.column::-webkit-scrollbar-track {
+  background: transparent;
+}
+.column::-webkit-scrollbar-thumb {
+  background: #d4d8e0;
+  border-radius: 4px;
+}
+.column::-webkit-scrollbar-thumb:hover {
+  background: #b8bcc4;
+}
+
+
+.column-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.add-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  width: 80%;
+  padding: 14px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+  transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: #357ABD;
+  transform: translateX(-50%) translateY(-2px);
+  box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+}

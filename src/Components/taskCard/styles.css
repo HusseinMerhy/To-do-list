@@ -1,0 +1,127 @@
+/* TaskCard.css */
+
+.task-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  padding: 18px;
+  margin-bottom: 18px;
+  position: relative;
+  cursor: context-menu;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  border-left: 5px solid transparent;
+}
+
+.task-card.overdue {
+  border-left: 5px solid #e74c3c;
+  box-shadow: 0 6px 20px rgba(231, 76, 60, 0.2);
+}
+
+.task-card:hover {
+  box-shadow: 0 8px 28px rgba(0,0,0,0.1);
+  transform: translateY(-3px);
+}
+
+.task-title {
+  font-weight: 600;
+  font-size: 1.15rem;
+  margin: 0 0 8px 0;
+  color: #2c3e50;
+}
+
+.task-desc {
+  font-size: 0.95rem;
+  color: #7f8c8d;
+  margin: 0 0 20px 0;
+  min-height: 40px;
+}
+
+.task-label {
+  position: absolute;
+  bottom: 18px;
+  right: 18px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: white;
+  user-select: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.task-label.blue {
+  background-color: #3498db;
+}
+
+.task-label.orange {
+  background-color: #f39c12;
+}
+
+.task-label.green {
+  background-color: #2ecc71;
+}
+
+/* Due Date Styles */
+.due-date-container {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  align-items: center;
+}
+.due-date-input {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-family: 'Poppins', sans-serif;
+  color: #555;
+}
+.due-date-btn {
+  padding: 6px 10px;
+  border: none;
+  background-color: #7f8c8d;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+.due-date-btn:hover {
+  background-color: #5c6a6b;
+}
+
+
+/* Context menu */
+.context-menu {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  padding: 8px 0;
+  z-index: 10000;
+  width: 160px;
+  font-size: 0.9rem;
+}
+
+.context-menu div {
+  padding: 10px 16px;
+  cursor: pointer;
+  color: #333;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.context-menu div:hover {
+  background-color: #4a90e2;
+  color: white;
+}
+.context-menu .remove-option {
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 5px;
+}
